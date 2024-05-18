@@ -1,6 +1,6 @@
 {
 	"name": "@html_first/atla-as_builder",
-	"version": "0.8.0",
+	"version": "1.0.0",
 	"description": "quick compact builder for @html_first packages",
 	"main": "index.mjs",
 	"scripts": {
