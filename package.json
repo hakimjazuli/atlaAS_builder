@@ -1,0 +1,35 @@
+{
+	"name": "@html_first/atla-as_builder",
+	"version": "0.8.0",
+	"description": "quick compact builder for @html_first packages",
+	"main": "index.mjs",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"peerDependencies": {
+		"@rollup/plugin-alias": "^5.1.0",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@rollup/plugin-terser": "^0.4.4",
+		"cssnano": "^6.1.2",
+		"postcss": "^8.4.38",
+		"rollup": "^4.17.2",
+		"rollup-plugin-scss": "^3.0.0",
+		"sass": "^1.77.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hakimjazuli/atlaAS_builder.git"
+	},
+	"keywords": [
+		"quick",
+		"builder",
+		"for",
+		"@html_first"
+	],
+	"author": "hakim_jazuli",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/hakimjazuli/atlaAS_builder/issues"
+	},
+	"homepage": "https://github.com/hakimjazuli/atlaAS_builder#readme"
+}
