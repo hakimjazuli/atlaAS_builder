@@ -1,1 +1,9 @@
-/node_modules
+.gitignore
+.npmignore
+
+/node_modules/
+
+/dev/
+
+/test/
+/src/test/

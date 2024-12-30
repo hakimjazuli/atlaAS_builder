@@ -1,21 +1,26 @@
 // @ts-check
 
+/**
+ * @description
+ * - typehelper for [_RollupSettings](#_rollupsettings) instantiation;
+ * - this class is to `one to one` file bundling;
+ */
 export class _RollupTarget {
 	/** @type {string} */
-	name;
+	targetName;
 	/** @type {string} */
-	source_path;
+	sourcePath;
 	/** @type {string} */
-	export_to_relative;
+	exportToRelative;
 	/**
 	 *
 	 * @param {string} name
-	 * @param {string} source_path
-	 * @param {string} export_to_relative
+	 * @param {string} sourcePath
+	 * @param {string} exportToRelative
 	 */
-	constructor(name, source_path, export_to_relative) {
-		this.name = name;
-		this.source_path = source_path;
-		this.export_to_relative = export_to_relative;
+	constructor(name, sourcePath, exportToRelative) {
+		this.targetName = name;
+		this.sourcePath = sourcePath;
+		this.exportToRelative = exportToRelative;
 	}
 }

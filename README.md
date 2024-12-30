@@ -1,50 +1,28 @@
 # atlaAS_builder
-
--   designed for `@html_first` packages;
--   though it might still be usefull for general usage for bundling;
-
-## installation
-
+- designed for `@html_first` packages;
+- though it might still be usefull for general usage for bundling;
+    ## installation
 ```shell
 npm i @html_first/atla-as_builder
 ```
+## exported-api-and-type-list
+- [_RollupSettings](#_rollupsettings)
+- [_RollupTarget](#_rolluptarget)
+- [_RollupTargetDir](#_rolluptargetdir)
+<h2 id="_rollupsettings">_RollupSettings</h2>
 
-```js
-// rollup.config.mjs
-// @ts-check
+call by class instantiation;```js// /dev/index.mjs// @ts-checkimport { _RollupSettings, _RollupTarget, _RollupTargetDir } from '@html_first/atla-as_builder';const targets = [...`(_RollupTarget|_RollupTargetDir)[]` /** array of _RollupTarget instances */];export default new _RollupSettings(targets, [	/** 'packages_to_resolves' optional */]).config;```then save to your script```json{..."scripts":{	...   "myscript":"node ./dev/index.mjs"	...}...}```which then you can trigger by```shellnpm run myscript```
 
-import { _RollupSettings, _RollupTarget } from '@html_first/atla-as_builder';
+*) <sub>[go to exported list](#exported-api-and-type-list)</sub>
 
-const targets = [...`_RollupTarget[]` /** array of _RollupTarget instances */];
+<h2 id="_rolluptarget">_RollupTarget</h2>
 
-export default new _RollupSettings(targets, [
-	/** 'packages_to_resolves' optional */
-]).config;
-```
+- typehelper for [_RollupSettings](#_rollupsettings) instantiation;- this class is to `one to one` file bundling;
 
-then save to your script
+*) <sub>[go to exported list](#exported-api-and-type-list)</sub>
 
-```json
-{
-    ...
-    "scripts":{
-        ...
-        "build":"rollup -c",
-        "watch":"rollup -c -w",
-        ...
-    }
-    ...
-}
-```
+<h2 id="_rolluptargetdir">_RollupTargetDir</h2>
 
-which then you can trigger by
+- typehelper for [_RollupSettings](#_rollupsettings) instantiation;- this class is to `many to many` files bundling;- the output will be inside `target` `relative` path;- usefull if you already manually `chunking` your output;
 
-```shell
-npm run build
-```
-
-or
-
-```shell
-npm run watch
-```
+*) <sub>[go to exported list](#exported-api-and-type-list)</sub>
