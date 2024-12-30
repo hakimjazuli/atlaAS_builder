@@ -6,7 +6,7 @@
  * // @ts-check
  * import { _RollupSettings, _RollupTarget, _RollupTargetDir } from '@html_first/atla-as_builder';
  * const targets = [...`(_RollupTarget|_RollupTargetDir)[]` /** array of _RollupTarget instances *[blank]/];
- * export default new _RollupSettings(targets, [
+ * new _RollupSettings(targets, [
  * 	/** 'packages_to_resolves' optional *[blank]/
  * ]).config;
  * ```
