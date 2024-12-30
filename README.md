@@ -11,7 +11,7 @@ npm i @html_first/atla-as_builder
 - [_RollupTargetDir](#_rolluptargetdir)
 <h2 id="_rollupsettings">_RollupSettings</h2>
 
-call by class instantiation;```js// /dev/index.mjs// @ts-checkimport { _RollupSettings, _RollupTarget, _RollupTargetDir } from '@html_first/atla-as_builder';const targets = [...`(_RollupTarget|_RollupTargetDir)[]` /** array of _RollupTarget instances */];export default new _RollupSettings(targets, [	/** 'packages_to_resolves' optional */]).config;```then save to your script```json{..."scripts":{	...   "myscript":"node ./dev/index.mjs"	...}...}```which then you can trigger by```shellnpm run myscript```
+call by class instantiation;```js// /dev/index.mjs// @ts-checkimport { _RollupSettings, _RollupTarget, _RollupTargetDir } from '@html_first/atla-as_builder';const targets = [...`(_RollupTarget|_RollupTargetDir)[]` /** array of _RollupTarget instances */];new _RollupSettings(targets, [	/** 'packages_to_resolves' optional */]).config;```then save to your script```json{..."scripts":{	...   "myscript":"node ./dev/index.mjs"	...}...}```which then you can trigger by```shellnpm run myscript```
 
 *) <sub>[go to exported list](#exported-api-and-type-list)</sub>
 
