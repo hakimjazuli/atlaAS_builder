@@ -42,6 +42,7 @@ import { _QueueFIFO, _QueueObject, _QueueObjectFIFO } from '@html_first/simple_q
  * ```shell
  * npm run myscript
  * ```
+ * - only support `.mjs` extention
  */
 /**
  * @typedef {(targets:(_RollupTarget[]|_RollupTargetDir[]),toResolveList?:(string[]|[]))=>void} _RollupSettingsConstructor
@@ -91,11 +92,6 @@ export class _RollupSettings {
 	 * @type {import('chokidar').FSWatcher}
 	 */
 	watcher;
-	/**
-	 * @private
-	 * @type {_RollupSettings}
-	 */
-	rollupSettings;
 	/**
 	 * @private
 	 * @param {string} path_
@@ -191,7 +187,7 @@ export class _RollupSettings {
 			const entries = this.readFilesNestedSync(folderPath);
 			for (let i = 0; i < entries.length; i++) {
 				const entry = entries[i];
-				if (!entry.isFile() || !['.mjs', '.ts', '.mts'].includes(extname(entry.name))) {
+				if (!entry.isFile() || '.mjs' !== extname(entry.name)) {
 					continue;
 				}
 				const baseWithoutExtName = basename(entry.name, extname(entry.name));

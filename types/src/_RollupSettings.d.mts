@@ -26,6 +26,7 @@
  * ```shell
  * npm run myscript
  * ```
+ * - only support `.mjs` extention
  */
 /**
  * @typedef {(targets:(_RollupTarget[]|_RollupTargetDir[]),toResolveList?:(string[]|[]))=>void} _RollupSettingsConstructor
@@ -57,11 +58,6 @@ export class _RollupSettings {
      * @type {_QueueFIFO}
      */
     private queueHandler;
-    /**
-     * @private
-     * @type {_RollupSettings}
-     */
-    private rollupSettings;
     /**
      * @private
      * @param {string} path_
